@@ -1,0 +1,47 @@
+﻿<Window x:Class="Jewelery.Windows.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jewelery.Windows"
+        mc:Ignorable="d"
+        Title="Registration" Height="297" Width="800">
+    <Canvas x:Name="returnBtn" Background="#FF242138">
+        <TabControl Height="211" Width="780" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="10">
+            <TabItem Header="Регистрационное окно">
+                <Canvas>
+                    <TextBox x:Name="number_txt" Canvas.Left="229" TextWrapping="Wrap" Text="" Canvas.Top="109" Width="120" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBox x:Name="login_txt" Canvas.Left="229" TextWrapping="Wrap" Text="" Canvas.Top="82" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <TextBox x:Name="password_txt" Canvas.Left="369" TextWrapping="Wrap" Text="" Canvas.Top="82" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="permissions_combo" Canvas.Left="369" Canvas.Top="105" Width="120">
+                        <ComboBoxItem Content="Administrator"/>
+                        <ComboBoxItem Content="Buyer"/>
+                        <ComboBoxItem Content="Worker"/>
+                    </ComboBox>
+                    <Label Content="Логин" Canvas.Left="261" Canvas.Top="51" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Label Content="Пароль" Canvas.Left="410" Canvas.Top="51" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Label Content="Номер телефона" Canvas.Left="126" Canvas.Top="101" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Label Content="Тип пользователя" Canvas.Left="494" Canvas.Top="105" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <Button x:Name="registrate_btn" Content="Послать заявку на регистрацию" Canvas.Left="268" Canvas.Top="132" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF4A4BAB" BorderBrush="#0CECAAAA" Foreground="#FFD0D0D0" Click="Button_Click"/>
+                    <Button x:Name="update_btn" Content="Обновить информацию" Canvas.Left="268" Canvas.Top="132" Background="#FF4A4BAB" BorderBrush="#0CECAAAA" Foreground="#FFD0D0D0" Click="update_btn_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Canvas>
+            </TabItem>
+            <TabItem x:Name="admin_tab" Header="Панель администратора">
+                <Canvas>
+                    <DataGrid x:Name="users_dataGrid" Height="183" Width="774" ColumnWidth="*">
+                        <DataGrid.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem x:Name="aproove_action" Header="Подтвердить регистрацию" Click="aproove_action_Click"/>
+                                <MenuItem x:Name="deni_action" Header="Отклонить регистрацию" Click="deni_action_Click"/>
+                                <MenuItem x:Name="updateInfo_action" Header="Обновить информацию" Click="updateInfo_action_Click"/>
+                                <MenuItem x:Name="deleting_action" Header="Ликвидировать пользователя" Click="deleting_action_Click"/>
+                            </ContextMenu>
+                        </DataGrid.ContextMenu>
+                    </DataGrid>
+                </Canvas>
+            </TabItem>
+        </TabControl>
+        <Button Content="Вернуться" Canvas.Left="325" Canvas.Top="226" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Background="#FF4A4BAB" BorderBrush="#0CECAAAA" Foreground="#FFD0D0D0" Click="Button_Click_1" />
+
+    </Canvas>
+</Window>

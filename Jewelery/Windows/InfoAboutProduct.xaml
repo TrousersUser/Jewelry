@@ -1,0 +1,14 @@
+﻿<Window x:Class="Jewelery.Windows.InfoAboutProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jewelery.Windows"
+        mc:Ignorable="d"
+        Title="InfoAboutProduct" Height="275" Width="800" Background="#FF2B2B2B">
+    <Grid>
+        <Label Content="Продукт был разработан компанией 'ООО'Бытие, сертифицирован как безопасный, организацией - 'Лаборатория Касперского'" HorizontalAlignment="Left" Margin="53,104,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="return_btn" Content="Return" HorizontalAlignment="Center" Margin="0,203,0,0" VerticalAlignment="Top" Click="return_btn_Click"/>
+
+    </Grid>
+</Window>
